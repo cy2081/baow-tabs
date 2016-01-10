@@ -1,0 +1,8 @@
+
+content tabsmenu chrome/content/
+content	tabsmenu	chrome/content/	contentaccessible=yes
+
+overlay chrome://browser/content/browser.xul chrome://tabsmenu/content/tabsmenu.xul
+
+locale tabsmenu en-US chrome/locale/en-US/
+locale tabsmenu zh-CN chrome/locale/zh-CN/

@@ -1,0 +1,5 @@
+#!/bin/bash
+file=cytabs.xpi
+rm $file
+zip -r $file chrome chrome.manifest defaults install.rdf
+

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://tabsmenu/content/tabsmenu.css" type="text/css"?>
+
+<!--
+  XUL user interface overlay for Firefox Tabs Menu extension
+  Mikel Ward <mikel@mikelward.com>
+-->
+
+<!DOCTYPE overlay SYSTEM "chrome://tabsmenu/locale/tabsmenu.dtd">
+
+<overlay id="tabsmenu"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  >
+
+  <script type="application/x-javascript" src="chrome://tabsmenu/content/tabsmenu.js"/>
+  <menubar id="main-menubar" >
+    <menu id="tabs-menu"
+          label="&tabs-menu.label;"
+          accesskey="&tabs-menu.accesskey;"
+          insertafter="tools-menu">
+      <menupopup id="menu_TabsPopup"
+                 onpopupshowing="tabsmenu.createTabsMenu(this)"/>
+    </menu>
+  </menubar>
+   <popup id="contentAreaContextMenu">
+    <menuseparator />
+    <menu id="tabs-menu2"
+      label="☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷"
+          >
+      <menupopup id="menu_TabsPopup2"
+                 onpopupshowing="tabsmenu.createTabsMenu(this)"/>
+    </menu>
+       <popup id="tabs-menu3" style="background-color:#ffffff;">
+       </popup>
+   </popup>
+
+</overlay>
+
+<!-- vi: set sw=2 ts=33: -->
